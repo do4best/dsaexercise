@@ -33,8 +33,25 @@ class Stack{
     }
 }
 
-const stack = new Stack();
-stack.push(1)
-stack.push(3)
-stack.pop()
-console.log(stack.peek())
+function reverseStringwithStack(str){
+    const stack = new Stack();
+    for(let i=0; i<str.length; i++){
+        stack.push(str[i])
+    }
+    let resultString="";
+    while(!stack.isEmpty()){
+        resultString += stack.pop();
+    }
+    return resultString
+}
+
+// const stack = new Stack();
+// stack.push(1)
+// stack.push(3)
+// stack.pop()
+
+// console.log(stack.peek())
+let thesentence = "Hello World"
+console.log(thesentence)
+let result = 0
+console.log(reverseStringwithStack(thesentence))
